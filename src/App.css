@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  /* max-width: 600px; */
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.form-container {
+  /* background: rgba(3, 25, 102, 0.7); */
+  /* background: linear-gradient(
+  to right, 
+  rgba(59, 6, 49, 0.7), 
+  rgba(11, 17, 203, 0) 
+); */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+background-image: url(/public/image.jpg);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
   color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+h1, h2, h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.table-custom {
+  margin-top: 20px;
+  text-align: left;
+}
+.mac{
+  color: #000;
+}
+
+
+
+.r1{
+  display: flex;
+}
+.r2{
+  padding: 20px;
+  border-right:1px solid grey
+}
+
+.rt1{
+  display: flex;
+}
+.rt2{
+  padding: 15px;
+  border:1px solid grey;
 }
