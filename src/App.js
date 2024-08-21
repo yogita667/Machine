@@ -6,6 +6,8 @@ import paginationFactory from "react-bootstrap-table2-paginator";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"; 
 
+
+
 function App() {
   const [formData, setFormData] = useState({
     partNumber: "",
@@ -89,7 +91,7 @@ function App() {
   
 
     axios
-      .post("http://localhost:3001/api/add-student", data)
+      .post("https://machinebackend-un08.onrender.com/api/add-student", data)
       .then((response) => {
         alert(response.data.message || "Data submitted successfully");
         setFormData({
@@ -136,7 +138,7 @@ function App() {
 
   const fetchStudents = () => {
     axios
-      .get("http://localhost:3001/api/get-students")
+      .get("https://machinebackend-un08.onrender.com/api/get-students")
       .then((response) => {
         setStudents(response.data);
       })
@@ -152,7 +154,7 @@ function App() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3001/api/delete-student/${id}`)
+      .delete(`https://machinebackend-un08.onrender.com/api/delete-student/${id}`)
       .then((response) => {
         alert(response.data.message || "Data deleted successfully");
         fetchStudents(); 
