@@ -153,53 +153,244 @@ function App() {
   );
 
   return (
-    <div>
-      <div className="form-container">
-        <h1>Add Machine Data</h1>
-        <form onSubmit={handleSubmit}>
-          <h3>Part Details</h3>
-          <row>
-            <div >
-              <div>
-                <label>Part Number</label>
-                <input
+
+<div>
+
+      <h1>Add Machine Data</h1>
+
+
+      <div>
+      <h3>Part Details</h3>
+      <div className="form-grid">
+      <div className="form-group">
+        <label htmlFor="input1">Part Number</label>
+        <input
                   type="text"
                   name="partNumber"
                   value={formData.partNumber}
                   onChange={handleInputChange}
                   required
                 />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label>Manufacturer</label>
-                <input
+      </div>
+      <div className="form-group">
+        <label htmlFor="input2">Manufacturer</label>
+        <input
                   type="text"
                   name="manufacturer"
                   value={formData.manufacturer}
                   onChange={handleInputChange}
                   required
                 />
-              </div>
-            </div>
-            <div>
-              <div>
-                <label>Quantity</label>
-                <input
+      </div>
+      <div className="form-group">
+        <label htmlFor="input3">Quantity</label>
+        <input
                   type="text"
                   name="quantity"
                   value={formData.quantity}
                   onChange={handleInputChange}
                   required
                 />
-              </div>
-            </div>
-          </row>
+      </div>
+    </div>
+      </div>
 
-          <h3>Attachments</h3>
-          <row>
-            {[
+
+      <div>
+      <h3>Supplier Details</h3>
+      <div className="form-grid">
+      <div className="form-group">
+      <label>Supplier Name</label>
+                <input
+                  type="text"
+                  name="supplierName"
+                  value={formData.supplierName}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Quantity</label>
+                <input
+                  type="text"
+                  name="supplierQuantity"
+                  value={formData.supplierQuantity}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Date Code</label>
+                <input
+                   type="date"
+                   name="dateCode"
+                   value={formData.dateCode}
+                   onChange={handleInputChange}
+                   required
+                />
+      </div>
+      
+      <div className="form-group">
+      <label>Cost per Piece (USD)</label>
+                <input
+                  type="text"
+                  name="costPerPieceUSD"
+                  value={formData.costPerPieceUSD}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Cost per Piece (INR)</label>
+                <input
+                    type="text"
+                    name="costPerPieceINR"
+                    value={formData.costPerPieceINR}
+                    onChange={handleInputChange}
+                    required
+                />
+      </div>
+      <div className="form-group">
+      <label>Total Cost (USD)</label>
+                <input
+                  ype="text"
+                  name="totalCostUSD"
+                  value={formData.totalCostUSD}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Total Cost (INR)</label>
+                <input
+                 type="text"
+                 name="totalCostINR"
+                 value={formData.totalCostINR}
+                 onChange={handleInputChange}
+                 required
+                />
+      </div>
+    </div>
+   
+
+    <h3>Customer Details</h3>
+      <div className="form-grid">
+      <div className="form-group">
+      <label>Customer Name</label>
+                <input
+                type="text"
+                name="customerName"
+                value={formData.customerName}
+                onChange={handleInputChange}
+                required
+                />
+      </div>
+      <div className="form-group">
+      <label>Quantity </label>
+                <input
+                  type="text"
+                  name="customerQuantity"
+                  value={formData.customerQuantity}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Invoice Number</label>
+                <input
+                 type="text"
+                 name="invoiceNumber"
+                 value={formData.invoiceNumber}
+                 onChange={handleInputChange}
+                 required
+                />
+      </div>
+      
+      <div className="form-group">
+      <label>Cost per Piece (USD)</label>
+                <input
+                 type="text"
+                 name="customerCostPerPieceUSD"
+                 value={formData.customerCostPerPieceUSD}
+                 onChange={handleInputChange}
+                 required
+                />
+      </div>
+      <div className="form-group">
+      <label>Cost per Piece (INR)</label>
+                <input
+                 type="text"
+                 name="customerCostPerPieceINR"
+                 value={formData.customerCostPerPieceINR}
+                 onChange={handleInputChange}
+                 required
+                />
+      </div>
+      <div className="form-group">
+      <label>Total Cost (USD)</label>
+                <input
+                  type="text"
+                  name="customerTotalCostUSD"
+                  value={formData.customerTotalCostUSD}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Total Cost (INR)</label>
+                <input
+                  type="text"
+                  name="customerTotalCostINR"
+                  value={formData.customerTotalCostINR}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+    </div>
+
+    <h3>Additional Details</h3>
+      <div className="form-grid">
+      <div className="form-group">
+      <label>BOE</label>
+                <input
+                  type="text"
+                  name="boe"
+                  value={formData.boe}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      <div className="form-group">
+      <label>Import Date</label>
+                <input
+                   type="date"
+                   name="importDate"
+                   value={formData.importDate}
+                   onChange={handleInputChange}
+                   required
+                />
+      </div>
+      <div className="form-group">
+      <label>Duty Payment</label>
+                <input
+                  type="text"
+                  name="dutyPayment"
+                  value={formData.dutyPayment}
+                  onChange={handleInputChange}
+                  required
+                />
+      </div>
+      
+     
+    </div>
+
+
+    <h3>Attachments</h3>
+     <div className="form-grid">
+     
+
+
+     {[
               "supplierPI",
               "supplierInvoice",
               "outwardRemittance",
@@ -212,9 +403,11 @@ function App() {
               "airwayBill",
               "partPhoto",
             ].map((field) => (
-              <div>
+              <div className="form-group">
                 <div>
-                  <label>{field.split(/(?=[A-Z])/).join(" ")}</label>
+                <label>{field.split(/(?=[A-Z])/).join(" ").replace(/^\w/, (c) => c.toUpperCase())}</label>
+
+                  <br/>
                   <input
                     type="file"
                     name={field}
@@ -224,17 +417,40 @@ function App() {
                 </div>
               </div>
             ))}
-          </row>
 
-          <button variant="primary" type="submit">
+
+
+     </div>
+
+     <div>
+      <h3>Remarks</h3>
+      <textarea 
+       type="textarea"
+       name="remarks"
+       value={formData.remarks}
+       onChange={handleInputChange}
+       
+       />
+      </div>
+          <button onClick={handleSubmit} variant="primary" type="submit">
             Submit
           </button>
           <button variant="secondary" type="reset">
             Reset
           </button>
-        </form>
+    
+
+
       </div>
 
+
+
+
+
+
+
+
+     
       <h2>Search Machines</h2>
       <input
         type="text"
@@ -325,5 +541,6 @@ function App() {
               </tr>))}
               </tbody>
       </table>
+    
       </div>)}
       export default App;
